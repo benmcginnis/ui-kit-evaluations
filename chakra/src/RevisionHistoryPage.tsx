@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Revision, RevisionHistory} from "./revisionHistory";
 import {
+  Container,
   Table,
   Thead,
   Tbody,
@@ -26,7 +27,7 @@ import {ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon} from '@chakra-ui/ico
 
 export const RevisionHistoryPage = () => {
   return (
-    <>
+    <Container w={"full"} maxW={"container.lg"} p={4}>
       <Breadcrumb>
         <BreadcrumbItem>
           <BreadcrumbLink href={"https://www.yext.com/s/3744518/search2/experiences"}>Search</BreadcrumbLink>
@@ -50,7 +51,7 @@ export const RevisionHistoryPage = () => {
           labels to a specific revision.</Text>
       </Stack>
       <RevisionHistoryTable/>
-    </>
+    </Container>
   )
 }
 

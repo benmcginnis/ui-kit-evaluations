@@ -18,12 +18,13 @@ import React, {useState} from "react";
 export const RevisionHistoryPage = () => {
   return (
     <View padding={4}>
-      <Container>
+      <Container width={"1400px"}>
         <View align={"start"} paddingBottom={16}>
           <View paddingBottom={4}>
             <Breadcrumbs>
               <Breadcrumbs.Item href={"https://www.yext.com/s/3744518/search2/experiences"}>Search</Breadcrumbs.Item>
-              <Breadcrumbs.Item href={"https://www.yext.com/s/3744518/search2/experiences/default"}>test</Breadcrumbs.Item>
+              <Breadcrumbs.Item
+                href={"https://www.yext.com/s/3744518/search2/experiences/default"}>test</Breadcrumbs.Item>
               <Breadcrumbs.Item>Revision History</Breadcrumbs.Item>
             </Breadcrumbs>
           </View>
@@ -31,7 +32,8 @@ export const RevisionHistoryPage = () => {
             <Text variant={"title-5"} as={"h1"}>Revision History</Text>
           </View>
           <Text>
-            Use this page to see all revisions of your search configuration and assign your latest and production labels to a specific revision.
+            Use this page to see all revisions of your search configuration and assign your latest and production labels
+            to a specific revision.
           </Text>
         </View>
         <RevisionHistoryTable/>
@@ -54,7 +56,7 @@ export const RevisionHistoryTable = () => {
                            onChange={({value}) => setLimit(parseInt(value))}
                            options={[
                              {value: "5", label: "5"},
-                              {value: "10", label: "10"},
+                             {value: "10", label: "10"},
                            ]}
             />
             </View>
@@ -64,7 +66,8 @@ export const RevisionHistoryTable = () => {
               <Button icon={IconChevronLeft} onClick={() => setOffset(offset - limit)} disabled={offset === 0}>
                 <HiddenVisually>Previous</HiddenVisually>
               </Button>
-              <Button icon={IconChevronRight} onClick={() => setOffset(offset + limit)} disabled={offset + limit >= RevisionHistory.length}>
+              <Button icon={IconChevronRight} onClick={() => setOffset(offset + limit)}
+                      disabled={offset + limit >= RevisionHistory.length}>
                 <HiddenVisually>Next</HiddenVisually>
               </Button>
             </View>
